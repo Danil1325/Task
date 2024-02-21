@@ -25,11 +25,11 @@
                     @forelse ($tasks as $task)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $loop->nume }}</td>
-                            <td>{{ $loop->descriere }}</td>
-                            <td>{{ $loop->stare }}</td>
+                            <td>{{ $task->nume }}</td>
+                            <td>{{ $task->descriere }}</td>
+                            <td>{{ $task->stare }}</td>
                             <td>
-                                <a href="{{route('task.edit')}}"  class="btn btn-sm btn-warning">Edit</a>
+                                <a href=""  class="btn btn-sm btn-warning">Edit</a>
                             </td>
                         </tr>
                     @empty
