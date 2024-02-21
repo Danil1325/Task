@@ -7,3 +7,4 @@ Route::resource('tasks', TaskController::class);
 
 Route::get('/task/create', [TaskController::class, 'create'])->name('task.create');
 Route::post('/task', [TaskController::class, 'store'])->name('task.store');
+
