@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nume');
             $table->text('descriere');
-            $table->enum('stare', ['În curs', 'Finalizată', 'Anulată']);
+            $table->enum('stare', ['În curs', 'Finalizată', 'Anulată'])->default('În curs');
             $table->timestamps();
         });
     }
