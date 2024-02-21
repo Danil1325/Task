@@ -30,7 +30,10 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        //
+        Task::create($request->all());
+        return redirect()
+            ->route('task.index')
+            ->with('success','Sarcina a fost adaugata cu succes!');
     }
 
     /**
