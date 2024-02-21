@@ -35,7 +35,9 @@ class TaskController extends Controller
         Task::create($request->all());
         return redirect()
             ->route('task.index')
-            ->with('success', 'Sarcina a fost adaugata cu succes!');
+
+            ->with('success','Sarcina a fost adaugata cu succes!');
+
     }
 
     /**
