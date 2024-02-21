@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
-use App\Http\Requests\StoreTaskRequest;
-use App\Http\Requests\UpdateTaskRequest;
+use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
@@ -22,18 +21,23 @@ class TaskController extends Controller
      */
     public function create()
     {
-        return view( 'task.create');
+
+        $tasks = Task::all();
+        return view('task.create', ['tasks' => $tasks]);
+
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreTaskRequest $request)
+    public function store(Request $request)
     {
         Task::create($request->all());
         return redirect()
             ->route('task.index')
+
             ->with('success','Sarcina a fost adaugata cu succes!');
+
     }
 
     /**
@@ -55,7 +59,7 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTaskRequest $request, Task $task)
+    public function update(Request $request, Task $task)
     {
         //
     }
