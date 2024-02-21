@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="{{ route('task.index') }}">Task</span></a>
+              <a class="nav-link" href="{{ route('tasks.index') }}">Task</span></a>
             </li>
           </ul>
         </div>
